@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <form>
+    <h2>Registration Form</h2>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required> Male
+    <input type="radio" id="female" name="gender" value="female" required> Female
+    <input type="radio" id="other" name="gender" value="other" required> Other<br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea><br><br>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+      <option value="">Select State</option>
+      <option value="State 1">Andhra Pradesh</option>
+      <option value="State 2">Arunachal Pradesh</option>
+      <option value="State 3">Assam</option>
+      <option value="State 4">Bihar</option>
+      <option value="State 5">Chattisgarh</option>
+      <!-- populate state options dynamically -->
+    </select><br><br>
+
+    <label for="city">City:</label>
+    <select id="city" name="city" required>
+      <option value="">Select City</option>
+      <!-- populate city options dynamically based on state selection -->
+    </select><br><br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <input type="submit" value="Sign Up">
+  </form>
+
+  </body>
+  </html>
