@@ -3,46 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Adventures</title>
+    <title>Wonder Adventures</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div>
-            <img src="logo.png" alt="Global Adventures Logo" style="height: 50px;">
-        </div>
         <nav>
-            <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: space-around;">
+            <ul>
+                <img src="logo.png" alt="Wonder Adventures Logo" style="height: 50px;">
                 <li><a href="index2.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="login.html">Sign in</a></li>
-                <li><a href="register.html">Sign up</a></li>
+                <li><a href="registration.html">Sign up</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Welcome to Global Adventures</h1>
+        <h1>Welcome to Wonder Adventures</h1>
         <!-- Image Slider -->
         <div class="slider">
             <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
             <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
 
             <div class="slides">
-                <div class="slide">
-                    <img src="destination1.jpg" alt="Destination 1" style="width: 100%;">
+                <div class="slide" id="s1">
+                    <img src="destination1.jpg" alt="Destination 1">
                 </div>
-                <div class="slide">
-                    <img src="destination2.jpg" alt="Destination 2" style="width: 100%;">
+                <div class="slide" id="s2">
+                    <img src="destination2.jpg" alt="Destination 2">
                 </div>
-                <div class="slide">
-                    <img src="destination3.jpg" alt="Destination 3" style="width: 100%;">
+                <div class="slide" id="s3">
+                    <img src="destination3.jpg" alt="Destination 3">
                 </div>
-                <div class="slide">
-                    <img src="dest4.jpg" alt="Destination 4" style="width: 100%;">
+                <div class="slide" id="s4">
+                    <img src="dest4.jpg" alt="Destination 4">
                 </div>
-                <div class="slide">
-                    <img src="dest5.jpg" alt="Destination 5" style="width: 100%;">
+                <div class="slide" id="s5">
+                    <img src="dest5.jpg" alt="Destination 5">
                 </div>
             </div>
 
@@ -50,15 +51,33 @@
                 <label for="slide1"></label>
                 <label for="slide2"></label>
                 <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
             </div>
         </div>
-        <p>Discover the world's most beautiful places with Global Adventures with Wonder Adventures. 
-            Your gateway to unforgettable journeys across the diverse landscapes of India. 
-            Embark on a voyage of discovery where ancient history meets modern marvels and many more
-        </p>
     </main>
     <footer>
-        <p>&copy; 2024 Global Adventures. All rights reserved.</p>
+        <p>&copy; 2024 Wonder Adventures. All rights reserved.</p>
     </footer>
+
+    <script>
+        const controls = document.querySelectorAll('.controls label');
+        const slides = document.querySelector('.slides');
+        let currentIndex = 0;
+
+        controls.forEach((control, index) => {
+            control.addEventListener('click', () => {
+                slides.style.transform = `translateX(-${index * 100}%)`;
+                currentIndex = index;
+            });
+        });
+
+        // Optional: Auto slide
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % controls.length;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 5000); // Change slide every 5 seconds
+    </script>
+    
 </body>
 </html>
