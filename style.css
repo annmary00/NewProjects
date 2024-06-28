@@ -184,6 +184,7 @@ footer {
     align-items: center;
     font-size: 14px;
     color: #666;
+    flex-wrap: nowrap;
 }
 
 .form-group-remember div {
@@ -192,15 +193,18 @@ footer {
 
 .form-group-remember input[type="checkbox"] {
     margin-right: 10px;
+    margin-top: 0;
 }
 
 .form-group-remember label {
     margin: 0;
+    margin-right: 10px;
 }
 
 .form-group-remember a {
     color: #007BFF;
     text-decoration: none;
+    margin-left: auto;
 }
 
 .form-group-remember a:hover {
